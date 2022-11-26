@@ -1,2 +1,2 @@
 # IteratorDemo
-Trying out IteratorProtocol
+Trying out IteratorProtocol in Swift
