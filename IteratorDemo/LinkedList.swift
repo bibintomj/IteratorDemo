@@ -11,6 +11,8 @@ struct LinkedList<Value>: Sequence {
     fileprivate(set) var first: Node?
     fileprivate(set) var last: Node?
 
+    var count = 0
+
     init(_ values: Value...) {
         values.forEach { self.append(value: $0) }
     }
@@ -30,7 +32,7 @@ struct LinkedList<Value>: Sequence {
         last?.next = node
         last = node
         if first == nil { first = node }
-        
+        count += 1
         return node
     }
 
@@ -42,6 +44,7 @@ struct LinkedList<Value>: Sequence {
         if node === last { last = node.previous }
 
         node.disconnect()
+        count -= 1
         return node
     }
 }
