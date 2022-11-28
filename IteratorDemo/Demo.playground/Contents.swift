@@ -11,10 +11,14 @@ func testCountdown() {
 //testCountdown()
 
 func testLinkedList() {
-    let linkedList = LinkedList(1,2,3)
-    for value in linkedList {
-        print(value)
-    }
+    var list = LinkedList(1,2,3)
+    list.append(value: 4)
+    list[2] = 8
+    list[4] = 9
+    print(list)
+    list.remove(at: 3)
+    print(list)
+
 }
 
 testLinkedList()
